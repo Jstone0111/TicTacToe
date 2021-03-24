@@ -1,56 +1,34 @@
-board{
-    padding: 3em;
+#board{
+    padding-top:  3em;
     text-align: center;
 }
 
-row{
-    clear: both;
-    margin: 0 auto;
-    width: 302px;
-}
-
-row > span{
-    float: left;
+div.row div {
     height: 100px;
     width: 100px;
-}
+    }
+    div:not(.row){
+    float: left;
+    }
 
-.top-left{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
+
+.top{
+    border-bottom: 1px solid blue;
 }
-.top-center{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+.middle{
 }
-.top-right{
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-}
- .middle-left{
+.bottom{
     border-top: 1px solid black;
-    height: 65px;
- }
- .middle-center{
-    border-bottom: 1px solid black;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    height: 65px;
 }
-.middle-right{
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
-    height: 65px;
+.left{
+    border-right: 1px solid red;
+ }
+.center{
+}
+.right{
+    border-left: 1px solid orange;
 }
 
- .left{
-     border-right: 1px solid black;
-     width: 65px;
-
- }
-
- .right{
-     border-left: 1px solid black ;
-
- }
+.row:hover{
+    cursor: pointer;
+}
