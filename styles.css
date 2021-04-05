@@ -3,34 +3,31 @@
     text-align: center;
 }
 
+.row {
+    display: flex;
+    justify-content: center;
+}
+
 .row > div {
+    display: flex;
+    justify-content: center;
     height: 100px;
     width: 100px;
     line-height: 100px;
     font-size: 75px;
-    }
-    div:not(.row){
-    float: left;
-    }
-
-
-
+}
 
 .top{
-    border-bottom: 1px solid blue;
-}
-.middle{
+    border-bottom: 1px solid black;
 }
 .bottom{
     border-top: 1px solid black;
 }
 .left{
-    border-right: 1px solid red;
- }
-.center{
+    border-right: 1px solid black;
 }
 .right{
-    border-left: 1px solid orange;
+    border-left: 1px solid black;
 }
 
 .row:hover{
