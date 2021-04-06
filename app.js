@@ -1,5 +1,6 @@
 let cells = document.querySelectorAll('.row > div');
 let currentPlayer = 'X';
+let gameStatus = false;
 
 
 for (let i = 0; i < cells.length; i++){
@@ -8,8 +9,8 @@ for (let i = 0; i < cells.length; i++){
 }
 
 
-function cellClicked(event){ //Handles the click and player swap.
-    if (event.target.textContent !== '') return; //If cell is not empty stop
+function cellClicked(event){
+    if (event.target.textContent !== '' || gameStatus === true) return; //If cell is not empty or the game is over, stop.
 
     if (currentPlayer === 'X') {
         event.target.textContent = currentPlayer;
@@ -39,8 +40,15 @@ function checkWin(){
         if (currentPlayer === 'X'){
             alert('O Wins!');
         } else{
-                alert('X Wins!');
+            alert('X Wins!');
         }
+
+        let playAgain = confirm('Would you like to play again?');
+        if (playAgain === true){
+            location.reload();
+        }
+
+        gameStatus = true;
     }
 }   
 
